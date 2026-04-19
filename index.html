@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="app">
+
+  <!-- Пароль -->
+  <div id="password-screen" class="screen active">
+    <h1>Небольшой секрет</h1>
+    <p>Привет 🥰 Предлагаю тебе отгадать загадку, которая состоит из 3 частей. Чтобы начать, введи пароль, который указан на QR коде:</p>
+    <input type="password" id="password-input" />
+    <button onclick="checkPassword()">Войти</button>
+    <p id="password-error" class="error"></p>
+  </div>
+
+  <!-- Загадки -->
+  <div id="quiz-screen" class="screen">
+    <div id="date-progress">
+      <span id="day">__</span>.<span id="month">__</span>.<span id="year">____</span>
+    </div>
+
+    <img id="question-image" alt="" />
+
+    <h2 id="question-title"></h2>
+    <input type="number" id="answer-input" />
+    <button onclick="submitAnswer()">Ответить</button>
+    <p id="answer-error" class="error"></p>
+  </div>
+
+  <!-- Финал -->
+  <div id="final-screen" class="screen">
+    <h1>💖</h1>
+    <div id="final-text-container">
+      <p class="final-line final-date">22.04.2026, 17:20</p>
+      <p class="final-line"><strong>Прекрасная Аня,</strong></p>
+      <p class="final-line"> приглашаю встретиться на Невском, прогуляться до тира и хорошенечко пострелять)</p>
+      <p class="final-line"> Дату и время если шо давай обсудим)</p>
+      <p class="final-line">Ну или если вообще в тир не хочешь - придумаю че-нить другое 😎</p>
+    </div>
+
+    <img src="shvr.png" alt="hedgehog" id="final-hedgehog" />
+  </div>
+
+</div>
+
+<div id="overlay"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
